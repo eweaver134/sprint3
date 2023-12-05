@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link ref="stylesheet" href="/FAQ.css" />
+    <link href="css.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Zen+Dots&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.collapsible').collapsible();
+            var elem = document.querySelector('.collapsible.expandable');
+            var instance = M.Collapsible.init(elem, {
+                accordion: false
+            });
+        });
+        window.onload = function () {
+            let links = document.getElementById("image_list").getElementsByTagName("a");
+            let count = 0;
+            let timer = setInterval(function () { count = (count + 1) % links.length; document.getElementById("image").src = links[count].href; document.getElementById("caption").innerHTML =links[count].title;}, 2000);
+        }
+    </script>
+    <style>
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        .material-icons {
+            color: #00ff00;
+        }
+        /* Footer */
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .footer-copyright {
+            color: white !important;
+        }
+
+        .material-icons {
+            color: #00FF00;
+        }
+
+        .material-icons.active {
+            color: #00FF00;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 30px;
+            font-weight: normal;
+            font-family: 'Zen Dots', sans-serif;
+        }
+
+        .image-and-text {
+            text-align: center;
+        }
+
+        .footer-links {
+            text-align: left;
+            margin-left: 230px;
+            margin-top: 30px;
+        }
+        #FAQ{
+            font-size: 6em;
+            font-family: 'Zen Dots', sans-serif;
+        }
+        #image{
+            align-content: center;
+            text-align: center;
+            width: 40%;
+            height:200px;
+        }
+        #slideshow-images{
+            text-align: center;
+        }
+        #image_list{
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo"><img src="images/logo.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="info.html">Information</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+    <div class="container">
+        <h1 id="FAQ">FAQs:</h1>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>What is a robot?</div>
+                <div class="collapsible-body"><span>Robots are autonomous creations made of metal and wiring that do things based on the code input to them, they come in many different shapes and sizes, some looking more humanoid than others.</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>What are some useful things robots can do?</div>
+                <div class="collapsible-body"><span>Robots can be used to automate repetitive tasks and jobs often done by humans, additionally they can be used to deliver various types of goods, or do other various services.</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>How expensive are robots?</div>
+                <div class="collapsible-body"><span>Some can be within the range of prices form $25,000 - $100,000 for industrial grade robots, however the exact price varies heavily depending on the type, function, materials, etc.</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>Are robots dangerous to society and jobs?</div>
+                <div class="collapsible-body"><span>Overall most robots are not dangerous to society at large, some people may lose their jobs to robots, however they also create new jobs for technicians and other mechanics who work on the robots.</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>How conveniently can robots deliver things?</div>
+                <div class="collapsible-body"><span>They can do so in a semi convenient fashion using pathing algorithms and satellite data in order to get your goods delivered within a timely fashion, however the technology is still developing and thus has errors occasionally.</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>Are robots moral?</div>
+                <div class="collapsible-body"><span>Robots are made with a specific set of guidelines in order to prevent the misuse of their strengths, this includes including the rough guidelines of a moral structure in their code that, are based around the “Three Laws of Robotics” (A robot may not injure a human being or, through inaction, allow a human being to come to harm. A robot must obey orders given to it by human beings except where such orders would conflict with the First Law. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.)</span></div>
+            </li>
+        </ul>
+        <br>
+        <ul class="collapsible expandable">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">chevron_right</i>Will robots one day take over the world?</div>
+                <div class="collapsible-body"><span>Hopefully and probably not, unless you mean that they are used in people's daily lives and are omnipresent in society.</span></div>
+            </li>
+        </ul>
+        <br>
+        <br>
+        <section class="main"  id = "slideshow-images">
+            <ul id="image_list">
+            <li id = "slideshow-images"><a href="images/craig-sybert-S-vkpXA3os8-unsplash.jpg" title="Vintage Robots"></a></li>
+            <li id = "slideshow-images"><a href="images/bill-nino-gteH4r8SSqM-unsplash.jpg" title="Delivery Robots"></a></li>
+            <li id = "slideshow-images"><a href="images/fdata-robot-K0Hcd9nEmLY-unsplash.jpg" title="Cafe Robot"></a></li>
+            <li id = "slideshow-images"><a href="images/maximalfocus-naSAHDWRNbQ-unsplash.jpg" title="Humanoid Robot"></a></li>
+            <li id = "slideshow-images"><a href="images/possessed-photography-YKW0JjP7rlU-unsplash.jpg" title="Sad Robot"></a></li>
+            <li id = "slideshow-images"><a href="images/sven-mieke-KxEBySpHZA4-unsplash.jpg" title="Teaching Display Robot"></a></li>
+            </ul>
+            <h2>Different Types of Robot</h2>
+            <h2 id="caption">Vintage Robots</h2>
+            <p ><img src="images/craig-sybert-S-vkpXA3os8-unsplash.jpg" alt="" id="image"></p>
+        </section>
+    </div>
+    <footer class="page-footer black darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <div class="image-and-text">
+                        <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                        <h2>Apple, The Fruit</h2>
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text, footer-links">Links</h5>
+                    <ul class="footer-links">
+                        <li> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="#!"> Contact Us</a></li><br />
+                        <li> <i class="small material-icons">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                        <li><i class="small material-icons">headset_mic</i><a class="grey-text text-lighten-3" href="#!"> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2023 Copyright Apple, The Fruit, All Rights Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

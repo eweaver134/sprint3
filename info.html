@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Information</title>
+    <!-- Compiled and minified CSS from Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+        function swap(evt) {
+            evt.preventDefault();
+            document.getElementById("image").src = this.getAttribute("href");
+            document.getElementById("additional_text").innerHTML = this.getAttribute("data-additional");
+        }
+
+        window.onload = function() {
+            let images = document.getElementById("image_list").getElementsByTagName("a");
+            for (let i = 0; i < images.length; i++) {
+                images[i].onclick = swap;
+            }
+        };
+
+    </script>
+    <style>
+        p {
+            font-size: 2em;
+            margin: 10px 20px
+        }
+
+        #image_list li {
+            padding-right: 10px;
+            display: inline;
+        }
+
+        #image_list {
+            margin-left: 200px;
+        }
+
+        #gallery {
+            margin-right: 400px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-container {
+            flex: 0 0 40%;
+            margin-right: 300px;
+        }
+
+        .text-container {
+            flex: 0 0 80%;
+        }
+
+        /*Navigation*/
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        /*Footer*/
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .footer-copyright {
+            color: white !important;
+        }
+
+        .material-icons {
+            color: #00FF00;
+        }
+
+        .material-icons.active {
+            color: #00FF00;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 30px;
+            font-weight: normal;
+            font-family: 'Zen Dots', sans-serif;
+        }
+
+        .image-and-text {
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo"><img src="images/logo.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+
+    <div class="info-container">
+        <h2 class="section-header" style="font-size: 6em;">Information on Robotic Technology</h2>
+        <br>
+        <p>The field of robotics is an evolutionary form of disruptive technology that has been taking the world by storm ever since its beginnings in the 1950’s. Just as the complexity of these machines has far surpassed George Devol’s original model from 1954, so has society’s fascination with the world of robotics and its capabilities. Nowadays, robots are being used around the globe to perform tasks to aid humans in countless fields from something as simple as cleaning your house to the precise work of a surgeon. The field of robotics has entirely transformed the ways in which society functions and there is so much more evolution to come. </p> <br>
+        <p class="infosubhead">What Are Robots?</p>
+        <p>The exact definition of what makes a robot has been in contention for several years with many roboticists claiming different things. According to Miriam Webster’s Dictionary, a <a href="https://www.merriam-webster.com/dictionary/robot">robot</a> is defined as “a device that automatically performs complicated, often repetitive tasks (as in an industrial assembly line)”. There are certainly some robots that may fit this description, but others that don’t quite fit in this box. Though at one point, the field of robotics may have been able to be summed up in this manner, it has now outgrown such narrow proportions. Robots have the capability to do so much more than they used to, and their spread of skills is only growing.
+
+
+
+        <section id="gallery" class="section section-contact scrollspy">
+            <div class="container">
+                <div class="image-container">
+                    <img src="images/davincirobot.jpg" width="150%" height="150%" alt="" id="image">
+                </div>
+                <div class="text-container">
+                    <p id="additional_text">The da Vinci system is a surgical robot that can be used to assist surgeons in performing minimally invasive surgery. The daVinci has three components: the surgeon console, patient cart, and vision cart. The surgeon console is where the surgeon is able to view the surgery area and control the instruments. The patient cart has the instruments used for surgery in addition to the camera. The vision cart is responsible for connecting the two other components as the communication hub and facilitates the high-definition 3D live video feed provided to the surgeon. With these elements the daVinci is able to function beyond normal human capabilities.</p>
+                </div>
+            </div>
+
+            <ul id="image_list">
+                <li><a href="images/davincirobot.jpg" title="Da Vinci Robot" id="first_link" data-additional="The da Vinci system is a surgical robot that can be used to assist surgeons in performing minimally invasive surgery. The daVinci has three components: the surgeon console, patient cart, and vision cart. The surgeon console is where the surgeon is able to view the surgery area and control the instruments. The patient cart has the instruments used for surgery in addition to the camera. The vision cart is responsible for connecting the two other components as the communication hub and facilitates the high-definition 3D live video feed provided to the surgeon. With these elements the daVinci is able to function beyond normal human capabilities.">
+                        <img src="images/davincirobot.jpg" width="8%" height="8%" alt=""></a></li>
+                <li><a href="images/dronerobot.jpg" title="Drone Robot" data-additional="Robots have also made their way into agriculture in the form of unmanned aerial vehicles (UAVs), or drones. The agricultural drones can be used by farmers in order to keep surveillance on their crops and livestock via the drone’s camera. Some farmers equip their UAVs with seeds so that they can be used to plant crops or trees. This has been very useful in efforts to combat deforestation by replanting trees, which these flying robots are able to do with much greater efficiency than humans are able to on their own. Additionally, drones can be used to spray treatments to diseased sections of crops, saving workers from needing to go out into fields with potentially dangerous conditions.">
+                        <img src="images/dronerobot.jpg" width="8%" height="8%" alt=""></a></li>
+                <li><a href="images/roombarobot.jpg" title="Roomba Robot" data-additional="One prime example of the prevalence of robots is the Roomba. Designed by iRobot, the Roomba is a small circular automatic vacuum. All the user has to do is turn it on, and the Roomba will navigate their way through the house vacuuming away any mess it comes across. As the robot goes throughout the house, its infrared sensors scan in front of it to prevent it from running into objects and walls. The Roomba is also able to detect when there are stairs in its path, so there are no worries about it tumbling down the stairs. In addition to its ability to sense objects in its path, the Roomba can also detect when there are areas of the floor with excessive dirt that need to be cleaned up.">
+                        <img src="images/roombarobot.jpg" width="8%" height="8%" alt=""></a></li>
+                <li><a href="images/spotdogrobot.jpg" title="Spot Dog Robot" data-additional="Another innovative use for modern day robots is in inspecting archeological sites. In Pompeii, there is a four-legged robot nicknamed “SPOT” created by Boston Dynamics Boston Dynamics which has been used to investigate and inspect several archeological sites there. With the help of Spot, inspections of these ruins can be done in a much safer manner than they could be if carried out by just humans. Furthermore, the robot is able to reach incredibly small spaces, once again, proving more effective than the capabilities of people. In the testing that they have done with Spot, it has been able to gather immensely useful data to help archeologists plan future inspections into the ruins Spot has explored.">
+                        <img src="images/spotdogrobot.jpg" width="8%" height="8%" alt=""></a></li>
+                <li><a href="images/starshiprobot.jpg" title="Starship Robot" data-additional="Another way in which robots are being used today is for the delivery of goods, packages, and food. A leading company in this charge is Starship Technologies with their Starship Robots. These robots are available around the world and are able to deliver completely autonomously. The robots navigate using the 12 cameras located around its body and multiple sensors in order to avoid obstacles and pedestrians as it performs its delivery. Its 6 wheels are designed to be able to go up and down curves with ease and it has built-in insulation to keep the food it is delivering the proper temperature. Additionally, it has security features to prevent the contents within the robot from being stolen, and GPS trackers.">
+                        <img src="images/starshiprobot.jpg" width="8%" height="8%" alt=""></a></li>
+            </ul>
+
+            <br>
+
+
+        </section>
+        <p class="infosubhead">Conclusion:</p>
+        <p>There is no doubt that the future of robotics in our world is bright and fast approaching. There are so many uses for robots already, much more than the few examples we’ve included here, and there are infinitely more in development or will soon be thought into a reality. The world is changing, and so has the field of robotics. Robotic technology has come a long way from its adolescent beginnings in the 1950’s and has evolved with our world impeccably. Similarly, worlds of disruptive technology have begun to collide as more and more robots are being infused with AI. AI, which stands for artificial intelligence, is another form of disruptive technology that has been taking the world by storm. But, its collaboration with the world of robotics means transformative things for our world. By combining robotics and AI, the capabilities of robots have grown exponentially. It is due to AI that so many robots are able to function autonomously. Nowadays, robotic technology and artificial intelligence are nearly inseparable from one another, with their synthesis only making them more powerful and more useful. These two are truly the future of our world, a future that is already starting to take shape.
+        </p>
+        <br>
+        <br>
+        <p>Sources: <a href="https://www.irobot.com/">iRobot</a>, <a href="https://www.starship.xyz/">Starship Robots</a>, <a href="https://www.intuitive.com/en-us/products-and-services/da-vinci">Intuitive</a>, <a href="https://bostondynamics.com/">Boston Dynamics</a>.</p>
+
+        <footer class="page-footer black darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <div class="image-and-text">
+                            <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                            <h2>Apple, The Fruit</h2>
+                        </div>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text, footer-links">Links</h5>
+                        <ul class="footer-links">
+                            <li> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="#!"> Contact Us</a></li><br />
+                            <li> <i class="small material-icons">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                            <li><i class="small material-icons">headset_mic</i><a class="grey-text text-lighten-3" href="#!"> Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2023 Copyright Apple, The Fruit, All Rights Reserved
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

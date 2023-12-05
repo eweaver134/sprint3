@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- Links to Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+    <style>
+        .image-and-text {
+            text-align: center;
+        }
+
+        .input-field.col.s6 input#first_name {
+            margin-left: 40px;
+        }
+
+        .input-field.col.s6 input#last_name {
+            margin-left: 40px;
+        }
+
+        .input-field.col.s6 input#first_name,
+        .input-field.col.s6 input#email,
+        .input-field.col.s6 input#last_name {
+            width: 95%;
+
+        }
+
+        .input-field.col.s6 label[for="first_name"],
+        .input-field.col.s6 label[for="last_name"] {
+            margin-left: 40px;
+
+        }
+
+        .btn-large {
+            margin-left: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .location-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+        }
+
+        .location-text {
+            flex: 1;
+        }
+
+        .map {
+            flex: 5;
+            margin-left: 20px;
+            border: 3px solid black;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        address {
+            font-style: italic;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        /*Navigation*/
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        /*Footer*/
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .footer-copyright {
+            color: white !important;
+        }
+
+        .material-icons {
+            color: #00FF00;
+        }
+
+        .material-icons.active {
+            color: #00FF00;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 30px;
+            font-weight: normal;
+            font-family: 'Zen Dots', sans-serif;
+        }
+
+        .image-and-text {
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo"><img src="images/logo.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+
+    <!-- Contact Us section -->
+    <div class="container">
+        <div class="row">
+            <h2 class="section-header" style="font-size: 6em;"> Contact Us</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="https://formsubmit.co/leonicholson2022@gmail.com" method="POST" class="col s12">
+            <div class="row">
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix" style="color: black;">edit</i>
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix" style="color: black;">edit</i>
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix" style="color: black;">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix" style="color: black; margin-left: 10px;">phone</i>
+                    <input id="phone" type="text" class="validate">
+                    <label for="phone">Phone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix" style="color: black;">mode_edit</i>
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Comments</label>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="Submit" class="black btn-large">
+            </div>
+        </form>
+    </div>
+
+    <!-- Location section -->
+    <div class="container" style="margin-top: 30px;">
+        <div class="row">
+            <h2 class="section-header" style="margin-bottom: 5px; font-size: 6em;">Location</h2>
+        </div>
+    </div>
+
+    <div class="location-container">
+        <div class="location-text">
+            <p style="margin-top: 0;">Our office is located at the following address: <span style="color: gray;">551 E High St, Oxford, OH 45056</span></p>
+        </div>
+    </div>
+
+    <div class="container map" style="margin:auto">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.212189435922!2d-84.7331787!3d39.5097004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88403d0af59465c7%3A0xff423fec6675f5a8!2sLaws%20Hall%2C%20551%20E%20High%20St%2C%20Oxford%2C%20OH%2045056!5e0!3m2!1sen!2sus!4v1698178015178!5m2!1sen!2sus" style="border:0; height: 500px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <br>
+    <br>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer black darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l8 s12">
+                    <div class="image-and-text center">
+                        <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                        <h2>Apple, The Fruit</h2>
+                    </div>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text, footer-links center">Info</h5>
+                    <ul class="footer-links center">
+                        <li class="center" class="center" class="center"> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="contact.html"> Contact Us</a></li><br />
+                        <li class="center" class="center"> <i class="small material-icons" style="margin-left: 25px">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                        <li class="center"><i class="small material-icons" style="margin-left: 95px">email</i><a class="grey-text text-lighten-3" href="#!"> applethefruit@apple.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright center">
+                    <div class="container">
+                        © 2023 Copyright Apple, The Fruit, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body></html>

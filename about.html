@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://eweaver134.github.io/IMS222-Sprint2/about.html -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+
+    <!-- Links to materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="./About Us_files/materialize.min.js"></script>
+    <link rel="stylesheet" href="./About Us_files/style.css">
+    <link href="./About Us_files/icon" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./About Us_files/css2" rel="stylesheet">
+    <script>
+        function toggle() {
+            //+ and - symbol toggling
+            if (this.getAttribute("class") == "plus") {
+                this.setAttribute("class", "minus");
+            } else {
+                this.setAttribute("class", "plus");
+            }
+            //open and close the answer part of the faq
+            if (this.nextElementSibling.getAttribute("class") == "closed") {
+                this.nextElementSibling.setAttribute("class", "open");
+            } else {
+                this.nextElementSibling.setAttribute("class", "closed");
+            }
+        }
+
+        window.onload = function() {
+            let h3s = document.getElementById("faqs").getElementsByTagName("h3");
+            for (i = 0; i < h3s.length; i++) {
+                h3s[i].onclick = toggle;
+            }
+        }
+
+    </script>
+    <style>
+        /* Navigation */
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        .image-and-text {
+            text-align: center;
+        }
+
+        .footer-links {
+            text-align: left;
+            margin-left: 230px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-family: 'Zen Dots', sans-serif;
+            font-size: 6em;
+        }
+
+        h3 {
+            font-family: 'Comme', sans-serif;
+
+        }
+
+        h4 {
+            font-family: 'Martian Mono', monospace;
+            font-size: 2em;
+        }
+
+        h3.plus {
+            background: url(plus.png) no-repeat left center;
+            background-position: 5%;
+            background-size: 20px 20px;
+            background-position: left;
+
+        }
+
+        h3.minus {
+            background: url(minus%20copy.png) no-repeat left center;
+            background-position: 5%;
+            background-size: 20px 20px;
+            background-position: left;
+        }
+
+        div.closed {
+            display: none;
+        }
+
+        div.open {
+            display: block;
+        }
+
+        #faqs p {
+            margin-left: 65px;
+            font-family: 'Comme', sans-serif;
+            
+        }
+
+        #faqs h3 {
+            font-size: 1em;
+            margin: 0;
+            cursor: pointer;
+            padding-left: 30px;
+            position: relative;
+            font-family: 'Martian Mono', monospace;
+            
+        }
+
+        .faq-item {
+            border: 1px solid #CCC;
+            margin-bottom: 10px;
+            padding: 10px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo"><img src="images/logo.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+
+    <!-- About Us Page Content -->
+    <div class="container">
+        <h2 style="font-family: 'Zen Dots', sans-serif;">Meet The Team!</h2>
+        <h4 style="font-size: 2em; text-align: center"> Here at Apple, The Fruit, we only hire highly qualified individuals. We've hired top-notch engineers, designers, and programmers in order to provide our clients with the best experience. Our team is what sets us apart. </p>
+            <div id="sophia">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">Sophia Canino</h3>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <h4 style="text-align:center; font-style: italic; font-size: 1em">CEO</h4>
+
+                    <h3 style="font-size: 1em; text-align: left;"><img src="images/SophiaCaninoHeadshot.JPG" style="width: 250px; float: left; margin: 10px; margin-bottom: 0;">Sophia is from Loveland, Ohio, where she first fell in love with the field of robotics. Throughout her high school career, she took many courses on robotics, engineering, and business, going on to work for several robotics companies after graduating. After working in the field for a couple of years, she embarked on a new journey and created this company for robotics consulting.</h3>
+                </div>
+            </div>
+
+            <div id="kylee">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">Kylee Phillips</h3>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <h4 style="text-align:center; font-style: italic; font-size: 1em">Robotics Designer</h4>
+                    <h3 style="font-size: 1em; text-align: left;"><img src="images/Kylee%20senior%20picture-160.jpeg" style="width: 250px; float: left; margin: 10px; display: block; margin-bottom: 0"> Kylee is from Plain City, Ohio. In high school, she started creating and designing robots, which sparked the beginning of her career. She has years of experience in 3D design, engineering, and robotics design. Her primary area of expertise is giving robots unique personalities.</h3>
+                </div>
+            </div>
+
+            <div id="leo">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">Leo Nicholson</h3>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <h4 style="text-align:center; font-style: italic; font-size: 1em">Chief of Marketing</h4>
+                    <h3 style="font-size: 1em; text-align: left;"> <img src="images/IMG_8256.jpg" style="width: 250px; float: left; margin: 10px; display: block; margin-bottom: 0">Leo is from Dayton Ohio and graduated from Northmont High School where he first learned of his passion for marketing. As the Chief of Marketing, Leo is responsible for creating and accelerating the company’s marketing strategy and brand recognition. Previously Leo has worked as the Chief Marketing Officer of similar companies such as Intel and Cvent.</h3>
+                </div>
+            </div>
+
+            <div id="ethan">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">Ethan Weaver</h3>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <h4 style="text-align:center; font-style: italic; font-size: 1em">Electrical Engineer</h4>
+                    <h3 style="font-size: 1em; text-align: left;"><img src="images/Screenshot_20231108_191025_Photos.jpg" style="width: 250px; float: left; margin: 10px; display: block; margin-bottom: 0">Ethan is from Madison Ohio. It was at Madison High School that Ethan first discovered his passion for engineering. He has since been dedicated to his projects, primarily in robotics. After bouncing between different companies, Ethan found himself in our company. Ethan discovered a new passion for consulting while utilizing his electrical engineering expertise.</h3>
+                </div>
+            </div>
+
+
+            <div id="cody">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">Cody Addington</h3>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                    <h4 style="text-align:center; font-style: italic; font-size: 1em ">Software Engineer</h4>
+                    <h3 style="font-size: 1em; text-align: left;"><img src="images/unnamed.jpg" style="width: 250px; float: left; margin: 10px; display: block; margin-bottom: 0">Cody is from Logan, Ohio. In high school, he had an interest in making small apps and games, helping to push him to make the jump to making bigger and better Software. His main specialties are making innovative new software that helps to push the boundaries of what can be done with robots. He has worked for years on making better software with companies like Minicahsoft, or Sunby.</h3>
+                </div>
+
+            </div>
+            <div id="FAQ">
+                <div class="row">
+                    <nav class="line">
+                        <div class="nav-wrapper black">
+                            <div class="container">
+                                <h3 style="text-align: center; padding-top: 7px">FAQ</h3>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <section id="faqs">
+                    <div class="faq-item">
+                        <h3 class="plus">What is our mission?</h3>
+                        <div class="closed">
+                            <p>Our mission is to inform people about the various benefits adding robots to your company can offer. As technology advances, we understand that adding robots to your daily life can be scary. But with a team of robot experts, we hope to teach you how robots and humans can work together.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="plus">How can potential clients get in touch with Apple, The Fruit?
+                        </h3>
+                        <div class="closed">
+                            <p>You can reach us by our phone number, 999-999-9999. You also have the option of filling out the information on the <a href="https://eweaver134.github.io/IMS222-Sprint2/contact.html"> Contact Us Page</a> so we can get in contact with you.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="plus">What sets your consulting company apart from other consulting companies?</h3>
+                        <div class="closed">
+                            <p>Our company focuses on the people. We make sure to hire top-notch people highly educated in robotics to give you the best help we possibly can. With a consulting company based upon robotics, something that advances more and more every year, we also make sure we advance with it.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="plus">Who are the primary cliets and audience for your consulting service?</h3>
+                        <div class="closed">
+                            <p>Anyone with an open mind to learn about robots! We can offer advice on what robots would help your company. We can also help design specialized robots to help meet the specific needs of your business.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="plus" style="color: black">Do you offer ongoing or follow-up support after consultations?</h3>
+                        <div class="closed">
+                            <p>Absolutely! We make sure our clients are 100% satisfied with our work. We make sure to frequently stay in contact with our clients and offer further advice or help where we can.
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="page-footer black darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l8 s12">
+                    <div class="image-and-text center">
+                        <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                        <h2>Apple, The Fruit</h2>
+                    </div>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text, footer-links center">Links</h5>
+                    <ul class="footer-links center">
+                        <li class="center" class="center" class="center"> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="#!"> Contact Us</a></li><br />
+                        <li class="center" class="center"> <i class="small material-icons">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                        <li class="center"><i class="small material-icons">headset_mic</i><a class="grey-text text-lighten-3" href="#!"> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright center">
+                    <div class="container">
+                        © 2023 Copyright Apple, The Fruit, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+</html>

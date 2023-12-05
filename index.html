@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <!-- Links to materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Zen+Dots&display=swap" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider({
+                indicators: false,
+                height: 600
+            });
+        });
+
+    </script>
+    <style>
+        /* Navigation */
+        .brand-logo img {
+            max-height: 3.5rem;
+            margin: 6px;
+        }
+
+        /* Banner */
+        .caption h3 {
+            font-size: 7em;
+            padding: 5px;
+        }
+
+        .caption h5 {
+            font-size: 3em;
+            padding: 5px;
+        }
+
+        /* Intro */
+        .introTitle {
+            font-size: 6em;
+        }
+
+        .paraContent {
+            font-size: 2em;
+        }
+
+        /* Footer */
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+        .footer-copyright {
+            color: white !important;
+        }
+
+        .material-icons {
+            color: #00FF00;
+        }
+
+        .material-icons.active {
+            color: #00FF00;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 30px;
+            font-weight: normal;
+            font-family: 'Zen Dots', sans-serif;
+        }
+
+        .image-and-text {
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width:992px) {
+            .caption h3 {
+                font-size: 4rem;
+            }
+
+            .caption h5 {
+                font-size: 2em;
+            }
+
+            .paraContent {
+                font-size: 1.5em;
+            }
+
+        }
+
+    </style>
+    <script>
+        function calculate(){
+            //input
+            let profit = parseInt(document.getElementById("profit").value);
+            let expenses = parseInt(document.getElementById("expenses").value);
+            let growth = parseFloat(document.getElementById("growth").value);
+            //process
+            profit = profit*1.32;
+            let newProfit = parseInt(profit);
+            
+            growth = ((growth/100)+1)+0.12;
+            let newGrowth = growth*newProfit;
+            newGrowth = parseInt(newGrowth);
+            
+            expenses = expenses*0.87;
+            let newExpenses = parseInt(expenses);
+            //output
+            document.getElementById("newProfit").value = newProfit;
+            document.getElementById("newExpenses").value = newExpenses;
+            document.getElementById("newGrowth").value = newGrowth;
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.html" class="brand-logo"><img src="images/logo.png" alt="logo"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Information</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">Frequently Asked Questions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">Frequently Asked Questions</a></li>
+    </ul>
+
+    <!-- Banner Slideshow -->
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="images/banner1.jpg">
+                <div class="caption center-align">
+                    <h3 class="black">Apple... The Fruit</h3>
+                    <h5 class="light grey-text text-lighten-3 black">Consulting With All Kinds of Robots.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/banner2.jpg">
+                <div class="caption center-align">
+                    <h3 class="black">Apple... The Fruit</h3>
+                    <h5 class="light grey-text text-lighten-3 black">Consulting With All Kinds of Robots.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/banner3.jpg">
+                <div class="caption center-align">
+                    <h3 class="black">Apple... The Fruit</h3>
+                    <h5 class="light grey-text text-lighten-3 black">Consulting With All Kinds of Robots.</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Intro Paragraph -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h1 class="introTitle">Welcome!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p class="paraContent">Welcome to the official Apple The Fruit website! Here we will help you to understand
+                    the innovations of robotics in modern society. If you're interested in learning more about
+                    what we do, please go <a href="info.html">here</a>. Our team strives to help people
+                    that are new to the field understand what it means to integrate robotics into their companies.
+                    Every member of our team has their own unique skills. To learn more about the individual
+                    members of our team, click <a href="about.html">here</a>. Here at Apple The Fruit we get asked
+                    a lot of questions by potential costomers. Visit our <a href="faq.html">FAQ</a> page to see some
+                    of these questions. Finally, if you want to reach us on social media or send us an email, please
+                    come visit our <a href="contact.html">Contact Us</a> page. Now if your interested in the
+                    basics, keep scrolling!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="images/homeImg1.jpg">
+                        <span class="card-title">Benefits</span>
+                    </div>
+                    <div class="card-content">
+                        <p>“Integrating these robots into manufacturing processes increases productivity, reduces costs, and enhances safety. Using robotics also helps manufacturers improve the quality of their products and meet customer demands more efficiently.”
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://copperdigital.com/blog/role-of-robotics-in-achieving-industry-4-0-objectives/#:~:text=Integrating%20these%20robots%20into%20manufacturing,meet%20customer%20demands%20more%20efficiently.">Quote Found Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l6 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="images/homeImg2.jpg">
+                        <span class="card-title black-text">Challenges</span>
+                    </div>
+                    <div class="card-content">
+                        <p>"Implementing robotics comes with its challenges, such as high costs, the need for specialized skills, and potential job displacement.”</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://copperdigital.com/blog/role-of-robotics-in-achieving-industry-4-0-objectives/#:~:text=Integrating%20these%20robots%20into%20manufacturing,meet%20customer%20demands%20more%20efficiently.">Quote Found Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <iframe width="650" height="315" src="https://www.youtube.com/embed/a-7Azih0D98?si=nk4x_ZMqILGWFPj6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <p>Here's an insightful video that delves into the debate "Will robots steal our jobs?". It is a quick watch and involves many of the concerns
+                            our costomers deal with.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/a-7Azih0D98">Link To Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l6 s12">
+                <div class="card large">
+                    <div class="card-image">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hhBSaVsMvgE?si=7zgJaYbN3BnlIduA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-content">
+                        <p>A quick video on robotic assistance in the workforce. Our company often uses points made in this video to encourage our costumers
+                            that robots are actually more benefitial than a problem.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="https://youtu.be/hhBSaVsMvgE">Link To Video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Algorithm -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <h1 class="introTitle">Is It Worth It?</h1>
+                <p class="paraContent">Implementing robotics into the manufacturing department of your company can increase profits and reduce expenses significantly!  Furthermore, 
+                this will also increase your rate of growth.  Enter your net profits/year and expenses along with your rate of growth then we will calculate your new predicted
+                profits and expenses for you!</p>
+            </div>
+        </div>
+        <div class="row">
+            <form action="" method="POST">
+                <div class="container">
+                    <div class="row" id="input">
+                        <div class="input-field col l6 s12">
+                            <input id="profit" type="text" class="validate" id="profit">
+                            <label for="profit">Net Profit</label>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <input id="expenses" type="text" class="validate" id="expenses">
+                            <label for="expenses">Net Expenses</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="growth" type="text" class="validate" id="growth">
+                            <label for="growth">Rate of Growth (%)</label>
+                        </div>
+                    </div>
+                    <div class="row" id="submit">
+                        <div class="col s12 center">
+                            <input type="button" value="Calculate" class="black btn-large" onclick="calculate()">
+                        </div>
+                    </div>
+                    <div class="row" id="results">
+                        <div class="input-field col l6 s12">
+                            <input id="newProfit" type="text" class="validate" id="newProfit" placeholder="New Profit">
+                            <label for="newProfit">New Profit</label>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <input id="newExpenses" type="text" class="validate" id="newExpenses" placeholder="Reduced Expenses">
+                            <label for="newExpenses">Reduced Expenses</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="newGrowth" type="text" class="validate" id="newGrowth" placeholder="Next Year Predicted Profit">
+                            <label for="newGrowth">Next Year's Predicted Profit</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row center">
+            <p class="paraContent">As you can see, implementing robotics into the manufacturing branch of most companies helps reduce the expenses for a company
+            and increases profits/rate of growth!</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer black darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l8 s12">
+                    <div class="image-and-text center">
+                        <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                        <h2>Apple, The Fruit</h2>
+                    </div>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text, footer-links center">Links</h5>
+                    <ul class="footer-links center">
+                        <li class="center" class="center" class="center"> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="#!"> Contact Us</a></li><br />
+                        <li class="center" class="center"> <i class="small material-icons">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                        <li class="center"><i class="small material-icons">headset_mic</i><a class="grey-text text-lighten-3" href="#!"> Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright center">
+                    <div class="container">
+                        © 2023 Copyright Apple, The Fruit, All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
