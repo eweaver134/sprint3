@@ -3,8 +3,11 @@
 
 <head>
     <title>Information</title>
-    <!-- Compiled and minified CSS from Materialize -->
+    <!-- Links to materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +17,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
 
 
@@ -37,7 +40,6 @@
                 images[i].onclick = swap;
             }
         };
-
     </script>
     <style>
         p {
@@ -58,7 +60,7 @@
             margin-right: 400px;
         }
 
-        .container {
+        .galleryContainer {
             display: flex;
             align-items: center;
         }
@@ -116,7 +118,6 @@
         .footer-links {
             margin-top: 30px;
         }
-
     </style>
 
 </head>
@@ -155,7 +156,7 @@
 
 
         <section id="gallery" class="section section-contact scrollspy">
-            <div class="container">
+            <div class="galleryContainer">
                 <div class="image-container">
                     <img src="images/davincirobot.jpg" width="150%" height="150%" alt="" id="image">
                 </div>
@@ -187,34 +188,36 @@
         <br>
         <br>
         <p>Sources: <a href="https://www.irobot.com/">iRobot</a>, <a href="https://www.starship.xyz/">Starship Robots</a>, <a href="https://www.intuitive.com/en-us/products-and-services/da-vinci">Intuitive</a>, <a href="https://bostondynamics.com/">Boston Dynamics</a>.</p>
+    </div>
 
-        <footer class="page-footer black darken-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <div class="image-and-text">
-                            <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
-                            <h2>Apple, The Fruit</h2>
-                        </div>
+    <!-- Footer -->
+    <footer class="page-footer black darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l8 s12">
+                    <div class="image-and-text center">
+                        <img src="images/logo.png" alt="Logo Image" width="200" height=auto style="padding-left: 10px; padding-right: 10px; padding-bottom: 20px; padding-top: 20px;"> <br>
+                        <h2>Apple, The Fruit</h2>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text, footer-links">Links</h5>
-                        <ul class="footer-links">
-                            <li> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="#!"> Contact Us</a></li><br />
-                            <li> <i class="small material-icons">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
-                            <li><i class="small material-icons">headset_mic</i><a class="grey-text text-lighten-3" href="#!"> Support</a></li>
-                        </ul>
+                </div>
+                <div class="col l4 s12">
+                    <h5 class="white-text, footer-links center">Info</h5>
+                    <ul class="footer-links center">
+                        <li class="center" class="center" class="center"> <i class="small material-icons">contact_mail</i> <a class="grey-text text-lighten-3" href="contact.html"> Contact Us</a></li><br />
+                        <li class="center" class="center"> <i class="small material-icons" style="margin-left: 25px">local_phone</i><a class="grey-text text-lighten-3" href="#!"> 999-999-9999</a></li><br />
+                        <li class="center"><i class="small material-icons" style="margin-left: 95px">email</i><a class="grey-text text-lighten-3" href="#!"> applethefruit@apple.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-copyright center">
+                    <div class="container">
+                        © 2023 Copyright Apple, The Fruit, All Rights Reserved
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2023 Copyright Apple, The Fruit, All Rights Reserved
-                </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body></html>
